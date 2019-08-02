@@ -1,0 +1,27 @@
+{
+  "name": "francisudeji.com",
+  "version": "1.0.0",
+  "description": "Personal website by Francis Udeji",
+  "main": "index.js",
+  "repository": "https://github.com/francisudeji/francisudeji.com.git",
+  "author": "francisudeji <francis.udejiofficial@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "build:static": "next export"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^9.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "postcss-easy-import": "^3.0.0",
+    "tailwindcss": "^1.0.6"
+  }
+}

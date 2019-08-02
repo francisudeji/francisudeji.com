@@ -5,5 +5,8 @@ node_modules
 .next
 .cache
 
+#export dir
+out
+
 #others
 yarn.lock
