@@ -4,6 +4,6 @@
 
 @import 'tailwindcss/utilities';
 
-/* body {
-  @apply bg-gray-light;
-} */
+body {
+  @apply bg-primary;
+}
