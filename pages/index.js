@@ -1,11 +1,13 @@
 import '../styles/index.css'
 import Layout from '../src/components/layout'
+import Works from '../src/components/Works'
 
 function Index() {
   return (
     <Layout>
-      <div className='container mx-auto p-6'>
-        <div className='md:flex'>
+      <div className='container mx-auto py-6'>
+        <Works />
+        {/* <div className='md:flex'>
           <div className='md:flex-shrink-0'>
             <img
               className='rounded-lg md:w-56'
@@ -31,7 +33,7 @@ function Index() {
         </div>
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-4'>
           Read More
-        </button>
+        </button> */}
       </div>
     </Layout>
   )
