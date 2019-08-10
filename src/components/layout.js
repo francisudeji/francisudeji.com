@@ -13,7 +13,7 @@ function Layout({ children }) {
             </div>
 
             <div className='block lg:hidden'>
-              <button className='flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white'>
+              <button className='flex items-center px-3 py-2 border rounded text-teal-200 border-indigo-600 hover:text-white hover:border-white'>
                 <svg
                   className='fill-current h-3 w-3'
                   viewBox='0 0 20 20'
@@ -28,19 +28,13 @@ function Layout({ children }) {
             <div className='w-full block lg:flex lg:items-center lg:w-auto'>
               <div className='text-sm lg:flex-grow'>
                 <a
-                  href='#responsive-header'
+                  href='#about'
                   className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg mr-4'
                 >
                   About
                 </a>
-                {/* <a
-                  href='#responsive-header'
-                  className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg mr-4'
-                >
-                  Blog
-                </a> */}
                 <a
-                  href='#responsive-header'
+                  href='#works'
                   className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
                 >
                   Works
@@ -61,28 +55,28 @@ function Layout({ children }) {
             </div>
           </nav>
         </div>
-        <div className='container p-6 flex justify-between items-center sm:flex-column'>
-          <div>
-            <h1 className='uppercase heading-tight tracking-wide font-bold text-xl text-white mb-3'>
-              Meet Francis Udeji
-            </h1>
-            <p className='text-gray-400 text-lg'>
-              I'm a Full Stack JavaScript Developer based in Abuja, Nigeria. I
-              have passion for quality software, accessibility, performance,
-              PWAs and More.
-            </p>
+        <div className='container p-6 '>
+          <div className='container-inner flex justify-between items-center'>
+            <div className=''>
+              <h1 className='uppercase heading-tight tracking-wide font-bold text-xl text-white mb-3'>
+                Hi and Welcome!
+              </h1>
+              <p className='text-gray-400 text-lg'>
+                I'm a Full Stack JavaScript Developer based in Abuja, Nigeria. I
+                have passion for quality software, accessibility, performance,
+                PWAs and More.
+              </p>
+            </div>
+            <img
+              src='/static/francisudeji.webp'
+              alt='Francis Udeji'
+              className='rounded'
+              style={{ borderRadius: '50%' }}
+            />
           </div>
-          <img
-            src='/static/francisudeji.webp'
-            alt='Francis Udeji'
-            className='rounded'
-            style={{ borderRadius: '50%' }}
-          />
         </div>
       </header>
-      <main>
-        <div className='container p-6'>{children}</div>
-      </main>
+      <main>{children}</main>
       {/* <footer className='w-100 bg-blue-500 p-6'>
         <div className='container py-6'>
           <div className='wrapper flex justify-between items-center'>
