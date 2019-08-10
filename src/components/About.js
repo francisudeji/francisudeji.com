@@ -6,26 +6,26 @@ function About() {
           About
         </h1>
 
-        <ul class='flex mt-3'>
-          <li class='flex-1 mr-2'>
+        <ul className='flex mt-3'>
+          <li className='flex-1 mr-2'>
             <a
-              class='text-center block border-b-4 border-indigo-600 rounded text-white hover:text-gray-200 py-2 px-4'
+              className='text-center block border-b-4 border-indigo-600 rounded text-white hover:text-gray-200 py-2 px-4'
               href='#'
             >
               Experience
             </a>
           </li>
-          <li class='flex-1 mr-2'>
+          <li className='flex-1 mr-2'>
             <a
-              class='text-center block rounded py-2 px-4  text-gray-500 hover:text-white'
+              className='text-center block rounded py-2 px-4  text-gray-500 hover:text-white'
               href='#'
             >
               Education
             </a>
           </li>
-          <li class='flex-1 mr-2'>
+          <li className='flex-1 mr-2'>
             <a
-              class='text-center block rounded py-2 px-4  text-gray-500 hover:text-white'
+              className='text-center block rounded py-2 px-4  text-gray-500 hover:text-white'
               href='#'
             >
               Skills

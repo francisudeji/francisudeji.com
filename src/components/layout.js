@@ -1,6 +1,9 @@
+import { useRef } from 'react'
 import '../../styles/layout.css'
 
 function Layout({ children }) {
+  const navigationRef = useRef()
+
   return (
     <>
       <header className='bg-secondary'>
@@ -13,7 +16,10 @@ function Layout({ children }) {
             </div>
 
             <div className='block lg:hidden'>
-              <button className='flex items-center px-3 py-2 border rounded text-teal-200 border-indigo-600 hover:text-white hover:border-white'>
+              <button
+                onClick={() => navigationRef.current.classList.toggle('hidden')}
+                className='flex items-center px-3 py-2 border rounded text-teal-200 border-indigo-600 hover:text-white hover:border-white'
+              >
                 <svg
                   className='fill-current h-3 w-3'
                   viewBox='0 0 20 20'
@@ -25,7 +31,11 @@ function Layout({ children }) {
               </button>
             </div>
 
-            <div className='w-full block lg:flex lg:items-center lg:w-auto'>
+            <div
+              ref={navigationRef}
+              style={{ maxHeight: '200px', transition: 'all 2s ease-in-out' }}
+              className={`w-full hidden lg:flex lg:items-center lg:w-auto lg:flex`}
+            >
               <div className='text-sm lg:flex-grow'>
                 <a
                   href='#about'
@@ -56,12 +66,12 @@ function Layout({ children }) {
           </nav>
         </div>
         <div className='container p-6 '>
-          <div className='container-inner flex justify-between items-center'>
-            <div className=''>
+          <div className='container-inner flex justify-between items-center flex-col md:flex-row'>
+            <div className='order-2 md:order1'>
               <h1 className='uppercase heading-tight tracking-wide font-bold text-xl text-white mb-3'>
                 Hi and Welcome!
               </h1>
-              <p className='text-gray-400 text-lg'>
+              <p className='text-gray-400 md:pr-6 text-lg mb-6'>
                 I'm a Full Stack JavaScript Developer based in Abuja, Nigeria. I
                 have passion for quality software, accessibility, performance,
                 PWAs and More.
@@ -70,7 +80,7 @@ function Layout({ children }) {
             <img
               src='/static/francisudeji.webp'
               alt='Francis Udeji'
-              className='rounded'
+              className='rounded order-1 md:order-2 md:h-auto mb-6 h-56'
               style={{ borderRadius: '50%' }}
             />
           </div>
