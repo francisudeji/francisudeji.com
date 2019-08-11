@@ -1,10 +1,19 @@
-function About() {
+import { useState } from 'react'
+import axios from 'axios'
+
+function About({ posts: p }) {
+  const [posts, setPosts] = useState(p)
   return (
     <section className='about bg-primary' id='about'>
       <div className='container mx-auto p-6'>
         <h1 className='uppercase tracking-wide text-xl text-indigo-600 font-bold mb-6'>
           About
         </h1>
+        {posts.map(p => (
+          <div className='text-white' key={p.title}>
+            {p.title}
+          </div>
+        ))}
 
         <ul className='flex mt-3'>
           <li className='flex-1 mr-2'>
@@ -33,7 +42,7 @@ function About() {
           </li>
         </ul>
 
-        <div id='experience' />
+        <div />
       </div>
     </section>
   )
