@@ -3,6 +3,11 @@ module.exports = {
     container: {
       center: true
     },
+    extend: {
+      width: {
+        '48%': '48%'
+      }
+    },
     backgroundColor: theme => ({
       primary: '#15202b',
       secondary: '#2d3748'
