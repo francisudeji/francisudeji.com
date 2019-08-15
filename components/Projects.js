@@ -4,7 +4,7 @@ function Projects() {
   return (
     <section className='projects bg-secondary' id='projects'>
       <div className='container mx-auto p-6'>
-        <h1 className='uppercase tracking-wide text-xl text-indigo-600 font-bold  mt-6 mb-10'>
+        <h1 className='uppercase tracking-wide text-xl text-indigo-600 font-bold  mt-6 mb-6'>
           Projects
         </h1>
         <div className='flex flex-col md:flex-row md:flex-wrap justify-between'>

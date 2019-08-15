@@ -20,11 +20,6 @@ function Landing() {
                   More About Me
                 </a>
               </Link>
-              <Link href='#contact'>
-                <a className='inline-block bg-primary rounded px-3 py-3 text-sm font-bold text-gray-200 mr-3'>
-                  Contact Me
-                </a>
-              </Link>
             </div>
           </div>
           <img

@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Projects from '../components/Projects'
 import About from '../components/About'
 import Landing from '../components/Landing'
+import Contact from '../components/Contact'
 
 function Index() {
   return (
@@ -67,6 +68,7 @@ function Index() {
         <Landing />
         <About />
         <Projects />
+        <Contact />
       </Layout>
     </>
   )

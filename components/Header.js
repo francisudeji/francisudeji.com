@@ -2,6 +2,16 @@ import { useRef } from 'react'
 
 function Header() {
   const navigationRef = useRef()
+
+  // const { height, opacity, transform } = useSpring({
+  //   from: { height: 0, opacity: 0, transform: 'translate3d(20px,0,0)' },
+  //   to: {
+  //     height: isOpen ? viewHeight : 0,
+  //     opacity: isOpen ? 1 : 0,
+  //     transform: `translate3d(${isOpen ? 0 : 20}px,0,0)`
+  //   }
+  // })
+
   return (
     <header className='bg-secondary'>
       <div className='container px-6 pt-6'>
@@ -48,13 +58,13 @@ function Header() {
                 Projects
               </a>
               <a
-                href='#responsive-header'
+                href='#contact'
                 className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
               >
                 Contact
               </a>
               <a
-                href='#responsive-header'
+                href='https://github.com/francisudeji'
                 className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
               >
                 GitHub
