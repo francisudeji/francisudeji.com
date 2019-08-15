@@ -1,16 +1,31 @@
 import Head from 'next/head'
 import '../styles/index.css'
-import Layout from '../src/components/layout'
-import Projects from '../src/components/Projects'
-import About from '../src/components/About'
-import Landing from '../src/components/Landing'
+import Layout from '../components/layout'
+import Projects from '../components/Projects'
+import About from '../components/About'
+import Landing from '../components/Landing'
 
 function Index() {
   return (
     <>
       <Head>
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=UA-145785346-1'
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+							window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-145785346-1');
+						`
+          }}
+        />
         <meta charSet='utf-8' />
-        <link rel='canonical' href='https://francisudeji.netlify.com' />
+        <link rel='canonical' href='https://francisudeji.com' />
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1, shrink-to-fit=no'
