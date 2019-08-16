@@ -26,6 +26,7 @@ function Index() {
           }}
         />
         <meta charSet='utf-8' />
+        <link rel='shortcut icon' href='/static/favicon.ico' />
         <link rel='canonical' href='https://francisudeji.com' />
         <meta
           name='viewport'
