@@ -1,0 +1,21 @@
+import { withRouter } from 'next/router'
+import BlogPost from '../../components/layouts/blog-post'
+
+export const meta = {
+  published: true,
+  publishedAt: '2019-07-26',
+  title: 'Welcome',
+  summary:
+    'Today marks the day i release a new version of my personal site which includes a blog section...',
+  image: '/static/site-feature.png'
+}
+
+export default withRouter(({ children, router }) => (
+  <BlogPost path={router.pathname} meta={meta}>
+    {children}
+  </BlogPost>
+))
+
+Welcome to my new blog built with Next.js. I intend on writing articles on full stack development and other tech related things that interest me. Keep an eye out once every week for a new blog post.
+
+Thank you and I hope you visit next week monday.

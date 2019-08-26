@@ -8,9 +8,25 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='en' style={{ scrollBehavior: 'smooth' }}>
-        <Head />
-        <body>
+      <Html lang='en' style={{ scrollBehavior: 'smooth', height: '100%' }}>
+        <Head>
+          <script
+            async
+            src='https://www.googletagmanager.com/gtag/js?id=UA-145785346-1'
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+							window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-145785346-1');
+						`
+            }}
+          />
+        </Head>
+        <body style={{ background: '#15202b' }}>
           <Main />
           <NextScript />
         </body>
