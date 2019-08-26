@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "export": "next export && mv out dist"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

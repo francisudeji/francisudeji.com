@@ -6,7 +6,7 @@ node_modules
 .cache
 
 #export dir
-out
+dist
 
 #others
 yarn.lock
