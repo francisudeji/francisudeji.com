@@ -2,14 +2,14 @@ import Link from 'next/link'
 function About() {
   return (
     <section className='about bg-primary' id='about'>
-      <div className='container mx-auto p-6'>
+      <div className='container mx-auto p-3'>
         <h1 className='uppercase tracking-wide text-xl text-indigo-600 font-bold mt-6 mb-6'>
           About
         </h1>
         <h2 className='tracking-wide text-xl text-white font-semibold mt-6 mb-3'>
           Howdy! I'm Francis Udeji 👋
         </h2>
-        <div className='content text-white text-xl antialiased'>
+        <div className='content text-gray-300 text-lg antialiased'>
           <p className='mb-6'>
             I'm a full stack JavaScript software engineer. I grew up in Abuja,
             Nigeria. I recently graduated from{' '}
@@ -28,7 +28,7 @@ function About() {
         <h2 className='tracking-wide text-xl text-white font-semibold mt-6 mb-3'>
           Skills and Stack 👋
         </h2>
-        <div className='content text-white text-xl antialiased'>
+        <div className='content text-gray-300 text-lg antialiased'>
           <ul className='pl-6 mb-6' style={{ listStyle: 'disc' }}>
             <li>Web Design and Development</li>
             <li>Technical Writing</li>
@@ -45,7 +45,7 @@ function About() {
         </div>
         <div className='flex'>
           <Link href='#contact'>
-            <a className='inline-block bg-primart border border-4 border-primary rounded px-3 py-3 text-sm font-bold text-white mr-3'>
+            <a className='inline-block bg-primart border border-4 border-primary rounded px-3 py-3 text-lg font-bold text-white mr-3'>
               Contact Me
             </a>
           </Link>

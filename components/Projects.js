@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard'
 function Projects() {
   return (
     <section className='projects bg-secondary' id='projects'>
-      <div className='container mx-auto p-6'>
+      <div className='container mx-auto p-3'>
         <h1 className='uppercase tracking-wide text-xl text-indigo-600 font-bold  mt-6 mb-6'>
           Projects
         </h1>

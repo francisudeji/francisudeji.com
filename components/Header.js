@@ -13,11 +13,11 @@ function Header() {
   // })
 
   return (
-    <header className='bg-secondary'>
-      <div className='container px-6 pt-6'>
-        <nav className='flex items-center justify-between flex-wrap py-3 px-6 rounded bg-primary shadow-2xl'>
+    <header className='bg-primary'>
+      <div className='container p-3'>
+        <nav className='flex items-center justify-between flex-wrap p-3'>
           <div className='text-white mr-6'>
-            <span className='font-semibold text-xl tracking-tight'>
+            <span className='font-normal text-2xl tracking-tight'>
               <a href='/' aria-label='Home Page'>
                 Francis Udeji
               </a>
@@ -47,9 +47,15 @@ function Header() {
             <div className='text-sm lg:flex-grow'>
               <a
                 href='#about'
-                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
+                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-secondary p-3 rounded text-lg'
               >
                 About
+              </a>
+              <a
+                href='/blog'
+                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
+              >
+                Blog
               </a>
               <a
                 href='#projects'

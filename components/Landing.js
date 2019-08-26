@@ -2,13 +2,13 @@ import Link from 'next/link'
 function Landing() {
   return (
     <section className='bg-secondary'>
-      <div className='container p-6 '>
+      <div className='container p-3'>
         <div className='container-inner flex justify-between items-center flex-col md:flex-row'>
           <div className='order-2 md:order1'>
             <h1 className='uppercase heading-tight tracking-wide font-bold text-xl text-white mb-3'>
               Hi and Welcome!
             </h1>
-            <p className='text-gray-400 md:pr-6 text-lg mb-6'>
+            <p className='text-gray-300 md:pr-6 text-lg mb-6'>
               I'm a Full Stack JavaScript Developer with 4 years experience
               (including unprofessional) based in Abuja, Nigeria. I am
               passionate about building quality software for the web, JavaScript
@@ -16,7 +16,7 @@ function Landing() {
             </p>
             <div className='flex'>
               <Link href='#about'>
-                <a className='inline-block bg-secondary border border-4 border-indigo-600 rounded px-3 py-3 text-sm font-bold text-gray-200 mr-3'>
+                <a className='inline-block bg-secondary border border-4 border-indigo-600 rounded px-3 py-3 text-lg font-bold text-gray-200 mr-3'>
                   More About Me
                 </a>
               </Link>

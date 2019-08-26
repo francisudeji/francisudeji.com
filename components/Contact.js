@@ -1,14 +1,14 @@
 function Contact() {
   return (
     <section className='projects bg-primary pb-6' id='contact'>
-      <div className='container mx-auto p-6'>
-        <h1 className='uppercase tracking-wide text-xl text-indigo-500 font-bold  mt-6 mb-6'>
+      <div className='container mx-auto p-3'>
+        <h1 className='uppercase tracking-wide text-xl text-indigo-500 font-bold  mt-6 mb-3'>
           Contact Me
         </h1>
         <div className='flex flex-col md:flex-row md:justify-between'>
-          <h2 className='tracking-wide text-xl text-white font-semibold mt-6 mb-3 flex-1 pr-3'>
-            Feel free to talk to me about opportunities, offers or just about
-            anything you can think of.
+          <h2 className='tracking-wide text-lg text-gray-300 mt-6 mb-3 flex-1 pr-3'>
+            Feel free to talk to me about opportunities, projects, offers or
+            just about anything.
             <br />
             <br />
             I'll make sure to get back to you ~24 hours. Alternatively you can
@@ -17,7 +17,7 @@ function Contact() {
               className='text-indigo-400'
               href='mailto:francis.udejiofficial@gmail.com'
             >
-              FrancisUdeji@gmail.com
+              francis.udejiofficial@gmail.com
             </a>{' '}
             or call me directly on +234 817 8383 363.
           </h2>
