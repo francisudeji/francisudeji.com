@@ -7,7 +7,7 @@ import pagination from 'pagination'
 import blogposts from '../posts/index'
 import { siteMeta } from '../blog.config'
 import Layout from '../components/layout'
-import '../styles/blog.css'
+// import '../styles/blog.css'
 
 const Blog = ({ router, page = 1 }) => {
   const paginator = new pagination.SearchPaginator({
@@ -28,19 +28,40 @@ const Blog = ({ router, page = 1 }) => {
 
   return (
     <Layout pageTitle='Blog | Francis Udeji'>
-      <div className='blog-page bg-secondary pt-6' style={{ height: '100%' }}>
-        <div className='container p-3'>
-          <div className='blog-overlay bg-primary p-6 rounded'>
+      <div className='bg-gray-100 py-10 md:py-20'>
+        <div className='container'>
+          <h2 className='text-3xl text-gray-800 font-bold px-6'>
+            All Blog Posts
+          </h2>
+          <div className='bg-white rounded-lg pt-1 pb-10 px-6 shadow-lg md:px-10 mt-5'>
             {blogposts
               .filter((_post, index) => results.indexOf(index) > -1)
               .map((post, index) => (
-                <Post
-                  key={index}
-                  title={post.title}
-                  summary={post.summary}
-                  date={post.publishedAt}
-                  path={post.path}
-                />
+                // <Post
+                //   key={index}
+                //   title={post.title}
+                //   summary={post.summary}
+                //   date={post.publishedAt}
+                //   path={post.path}
+                // />
+                <div className='mt-10' key={post.title}>
+                  <h3 className='inline-block text-2xl text-gray-800 font-semibold hover:text-blue-500'>
+                    <Link href={post.path}>
+                      <a>{post.title}</a>
+                    </Link>
+                  </h3>
+                  <p className='text-base text-gray-800 font-normal mt-2'>
+                    {post.summary}
+                    <Link href={post.path}>
+                      <a
+                        className='text-blue-500'
+                        aria-label={`Read ${post.title}`}
+                      >
+                        Read More →
+                      </a>
+                    </Link>
+                  </p>
+                </div>
               ))}
 
             <ul>

@@ -37,10 +37,9 @@ function NextHead({ pageTitle }) {
         name='og:description'
         content='Francis Udeji | Full Stack JavaScript Developer'
       />
-      <meta name='og:url' content='https://francisudeji.netlify.com' />
+      <meta name='og:url' content='https://francisudeji.com' />
       <meta name='og:site_name' content='Francis Udeji' />
       <meta name='og:type' content='website' />
-
       {pageTitle ? (
         <title>{pageTitle}</title>
       ) : (

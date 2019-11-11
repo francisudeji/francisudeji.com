@@ -1,83 +1,139 @@
-import { useRef } from 'react'
+import { useState } from 'react'
+import Link from 'next/link'
+import {
+  FaReadme,
+  FaPen,
+  FaEnvelope,
+  FaGithub,
+  FaTimes,
+  FaLaptopCode
+} from 'react-icons/fa'
 
 function Header() {
-  const navigationRef = useRef()
-
-  // const { height, opacity, transform } = useSpring({
-  //   from: { height: 0, opacity: 0, transform: 'translate3d(20px,0,0)' },
-  //   to: {
-  //     height: isOpen ? viewHeight : 0,
-  //     opacity: isOpen ? 1 : 0,
-  //     transform: `translate3d(${isOpen ? 0 : 20}px,0,0)`
-  //   }
-  // })
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <header className='bg-primary'>
-      <div className='container p-3'>
-        <nav className='flex items-center justify-between flex-wrap p-3'>
-          <div className='text-white mr-6'>
-            <span className='font-normal text-2xl tracking-tight'>
-              <a href='/' aria-label='Home Page'>
-                Francis Udeji
-              </a>
-            </span>
-          </div>
+      <div className='container'>
+        <div className='flex justify-between items-center px-6 py-6'>
+          <span className='text-xl text-white'>
+            <Link href='/'>
+              <a>Francis Udeji</a>
+            </Link>
+          </span>
+          <nav className='desktop hidden sm:block'>
+            <ul className='flex items-center'>
+              <li className='text-lg text-white ml-4'>
+                <Link href='/about'>
+                  <a className='px-3 py-1 focus:bg-gray-800 hover:bg-gray-800'>
+                    About
+                  </a>
+                </Link>
+              </li>
+              <li className='text-lg text-white ml-4'>
+                <Link href='/blog'>
+                  <a className='px-3 py-1 focus:bg-gray-800 hover:bg-gray-800'>
+                    Blog
+                  </a>
+                </Link>
+              </li>
+              <li className='text-lg text-white ml-4'>
+                <Link href='/works'>
+                  <a className='px-3 py-1 focus:bg-gray-800 hover:bg-gray-800'>
+                    Works
+                  </a>
+                </Link>
+              </li>
+              <li className='text-lg text-white ml-4'>
+                <Link href='/contact'>
+                  <a className='px-3 py-1 focus:bg-gray-800 hover:bg-gray-800'>
+                    Contact
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-          <div className='block lg:hidden'>
-            <button
-              onClick={() => navigationRef.current.classList.toggle('hidden')}
-              className='flex items-center px-3 py-2 border rounded text-teal-200 border-indigo-600 hover:text-white hover:border-white'
+          <button
+            className='text-white p-2 sm:hidden'
+            onClick={() => setIsOpen(true)}
+          >
+            <svg
+              className='fill-current h-5 w-5'
+              viewBox='0 0 20 20'
+              xmlns='http://www.w3.org/2000/svg'
             >
-              <svg
-                className='fill-current h-3 w-3'
-                viewBox='0 0 20 20'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <title>Menu</title>
-                <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
-              </svg>
-            </button>
-          </div>
+              <title>Menu</title>
+              <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
+            </svg>
+          </button>
 
           <div
-            ref={navigationRef}
-            className='w-full hidden lg:flex lg:items-center lg:w-auto lg:flex'
+            className={`bg-primary absolute top-0 left-0 w-full h-full`}
+            style={{
+              transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
+              transition: 'transform 0.25s ease-in-out'
+            }}
           >
-            <div className='text-sm lg:flex-grow'>
-              <a
-                href='#about'
-                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-secondary p-3 rounded text-lg'
+            <div className='flex justify-between items-center px-6 py-4 border-b border-gray-700'>
+              <span className='text-xl text-white font-semibold'>
+                <Link href='/'>
+                  <a>Francis Udeji</a>
+                </Link>
+              </span>
+              <button
+                className='text-white p-2'
+                onClick={() => setIsOpen(false)}
               >
-                About
-              </a>
-              <a
-                href='/blog'
-                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
-              >
-                Blog
-              </a>
-              <a
-                href='#projects'
-                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
-              >
-                Projects
-              </a>
-              <a
-                href='#contact'
-                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
-              >
-                Contact
-              </a>
-              <a
-                href='https://github.com/francisudeji'
-                className='block mt-4 lg:inline-block lg:mt-0 text-white hover:bg-primary p-3 rounded text-lg'
-              >
-                GitHub
-              </a>
+                <FaTimes aria-label='Close Menu' className='text-xl' />
+              </button>
             </div>
+            <nav className='px-4 text-white mt-6'>
+              <ul>
+                <li className='mb-3'>
+                  <Link href='/about'>
+                    <a className='py-2 px-2 rounded-lg flex items-center focus:bg-gray-800 hover:bg-gray-800'>
+                      <FaReadme className=' mr-3' />
+                      <span>About</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className='mb-3'>
+                  <Link href='/blog'>
+                    <a className='py-2 px-2 rounded-lg flex items-center focus:bg-gray-800 hover:bg-gray-800'>
+                      <FaPen className='mr-3' />
+                      <span>Blog</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className='mb-3'>
+                  <Link href='/works'>
+                    <a className='py-2 px-2 rounded-lg flex items-center focus:bg-gray-800 hover:bg-gray-800'>
+                      <FaLaptopCode className='mr-3' />
+                      <span>Works</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className='mb-3'>
+                  <Link href='/contact'>
+                    <a className='py-2 px-2 rounded-lg flex items-center focus:bg-gray-800 hover:bg-gray-800'>
+                      <FaEnvelope className='mr-3' />
+                      <span>Contact</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className='mb-3'>
+                  <Link href='/about'>
+                    <a className='py-2 px-2 rounded-lg flex items-center focus:bg-gray-800 hover:bg-gray-800'>
+                      <FaGithub className='mr-3' />
+                      <span>GitHub</span>
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
   )

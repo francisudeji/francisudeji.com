@@ -14,9 +14,9 @@ export default () => (
         word-break: normal;
         word-wrap: normal;
         line-height: 1.5;
-        -moz-tab-size: 2;
-        -o-tab-size: 2;
-        tab-size: 2;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
         -webkit-hyphens: none;
         -moz-hyphens: none;
         -ms-hyphens: none;
@@ -136,7 +136,7 @@ export default () => (
       // TODO: add this in the prismjs plugin
       code {
         padding: 0.1em 0.2em;
-        background-color: #5a67d8;
+        background-color: #2b2b2b;
         border-radius: 0.3em;
       }
       code[class*='language-'],

@@ -3,7 +3,7 @@ import BlogPost from '../../components/layouts/blog-post'
 
 export const meta = {
   published: true,
-  publishedAt: '2019-05-03',
+  publishedAt: '2019-10-03',
   title: 'Syntax highlighting',
   summary:
     "This is sample summary of each blog post on the website. Nothing too fancy, just for testing...",

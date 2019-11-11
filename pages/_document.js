@@ -26,7 +26,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body style={{ background: '#15202b' }}>
+        <body>
           <Main />
           <NextScript />
         </body>

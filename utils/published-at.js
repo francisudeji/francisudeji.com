@@ -8,9 +8,13 @@ function PublishedAt(props) {
   return (
     <>
       <Link href={link}>
-        <a href={link} className='text-lg text-gray-500' {...props}>
+        <a
+          href={link}
+          className='uppercase tracking-tight text-sm text-gray-700'
+          {...props}
+        >
           <time className=''>
-            {format(new Date(year, month, day), 'MMMM dd, yyyy')}
+            {format(new Date(year, month, day), 'MMM dd, yyyy')}
           </time>
         </a>
       </Link>
