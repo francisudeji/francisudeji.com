@@ -18,9 +18,6 @@ function Contact() {
                   name='Contact from francisudeji.com'
                   className='block'
                 >
-                  <div className='hidden'>
-                    <input name='bot-field' />
-                  </div>
                   <div className='mt-6'>
                     <label
                       className='block text-blue-500 text-sm mb-2'
