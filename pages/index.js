@@ -1,8 +1,6 @@
-import { useEffect } from 'react'
 import Layout from '../components/layout'
 import blogposts from '../posts/index'
 import Link from 'next/link'
-import axios from 'axios'
 
 function Index() {
   return (
