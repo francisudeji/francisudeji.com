@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='en' style={{ scrollBehavior: 'smooth', height: '100%' }}>
+      <Html lang='en' style={{ height: '100%' }}>
         <Head>
           <script
             async
