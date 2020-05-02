@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types'
-import Link from 'next/link'
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 const NextPrevPost = ({ title, path, position }) => {
-  const isNext = position === 'next'
+  const isNext = position === 'next';
   return (
     <>
       <Link href={path}>
-        <a className='text-gray-500 text-lg'>
+        <a className='text-lg text-gray-800'>
           <small>{position} post </small>
           {title}
         </a>
@@ -20,15 +20,15 @@ const NextPrevPost = ({ title, path, position }) => {
         }
       `}</style>
     </>
-  )
-}
+  );
+};
 
 NextPrevPost.propTypes = {
   title: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
-  position: PropTypes.oneOf(['next', 'previous'])
-}
+  position: PropTypes.oneOf(['next', 'previous']),
+};
 
-export default NextPrevPost
+export default NextPrevPost;
 
 // CRUTECHCBT248B
