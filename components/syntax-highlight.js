@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default () => (
   <style jsx global>
@@ -7,7 +7,8 @@ export default () => (
       pre[class*='language-'] {
         color: #f8f8f2;
         background: none;
-        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-family: 'Dank Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+          monospace;
         text-align: left;
         white-space: pre;
         word-spacing: normal;
@@ -30,7 +31,7 @@ export default () => (
       }
       :not(pre) > code[class*='language-'],
       pre[class*='language-'] {
-        background: #2b2b2b;
+        background: #000c18;
       }
       :not(pre) > code[class*='language-'] {
         padding: 0.1em;
@@ -136,13 +137,14 @@ export default () => (
       // TODO: add this in the prismjs plugin
       code {
         padding: 0.1em 0.2em;
-        background-color: #2b2b2b;
+        background-color: #edf2f7;
         border-radius: 0.3em;
+        font-size: 0.9rem;
       }
       code[class*='language-'],
       pre[class*='language-'] {
-        font-size: 16px;
-        line-height: 1.3;
+        font-size: 1rem;
+        line-height: 1.5;
       }
       pre[class*='language-'] {
         margin-bottom: 1em;
@@ -161,4 +163,4 @@ export default () => (
       }
     `}
   </style>
-)
+);
