@@ -1,7 +1,7 @@
-import Header from './Header'
-import '../styles/styles.css'
-import Footer from './Footer'
-import NextHead from './head'
+import Header from './Header';
+// import '../styles/styles.css'
+import Footer from './Footer';
+import NextHead from './head';
 
 function Layout({ children, pageTitle }) {
   return (
@@ -13,7 +13,7 @@ function Layout({ children, pageTitle }) {
         <Footer />
       </div>
     </>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

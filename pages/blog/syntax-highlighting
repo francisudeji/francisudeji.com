@@ -1,0 +1,85 @@
+import { withRouter } from 'next/router'
+import BlogPost from '../../components/layouts/blog-post'
+
+export const meta = {
+published: true,
+publishedAt: '2019-10-03',
+title: 'Syntax highlighting',
+summary:
+"This is sample summary of each blog post on the website. Nothing too fancy, just for testing...",
+image: '/static/site-feature.png'
+}
+
+export default withRouter(({ children, router }) => (
+<BlogPost path={router.pathname} meta={meta}>
+{children}
+</BlogPost>
+))
+
+Here are some code snippets to show you how syntax highlighting looks.
+
+```js{4,5}
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
+```
+
+In this snippet, we are simply displaying Hello World on the screen and if everything checks out, we're not gonna get any error messages.
+
+## 1. Scaffolding a New Project
+
+To scallfold a new project, paste this snippet in your terminal:
+
+```bash
+  npx create-react-app test-application
+```
+
+## 2. Installation of Dependencies
+
+Here's a list of all the dependencies we'll be installing:
+
+- axios
+- dotenv
+- react
+- react-dom
+- next
+
+The `react` and `react-dom` packages are needed because **Next.js** depends on it. Check out the [official documentation](https://vercel.com).
+
+> **NOTE** The above step must be done only in production environment. That is, setting `process.env.NODE_ENV === "production"` is required so that you don't delete usefull classes in development
+
+```scss
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+```
