@@ -619,6 +619,117 @@ video {
   }
 }
 
+@font-face {
+  font-family: 'Dank Mono';
+
+  font-style: normal;
+
+  src: url('../fonts/DankMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+
+  font-style: bold;
+
+  font-weight: 700;
+
+  src: url('../fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url('../fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Light';
+
+  font-style: normal;
+
+  font-weight: 300;
+
+  src: url('../fonts/Lato-Light.ttf') format('truetype');
+}
+
+html {
+  font-family: 'Lato Regular';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato Bold';
+  margin-top: 0.5rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  margin: 1.5rem 0;
+}
+
+article p {
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+article p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+article {
+  color: #2d3748;
+}
+
+article ul {
+  margin-left: 2rem;
+  list-style: disc;
+  margin: 1rem;
+}
+
+/* article ul li::before {
+  content: '○';
+  border-radius: 100%;
+  font-size: 20px;
+  margin-right: 0.5rem;
+} */
+
+article a {
+  color: #3182ce;
+}
+
+article blockquote {
+  margin: 1rem 0;
+  /* margin-left: 2rem; */
+  border-left: 4px solid #3182ce;
+  font-style: inherit;
+  padding-left: 1rem;
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));

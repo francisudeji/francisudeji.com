@@ -1,12 +1,12 @@
-import React from 'react'
-import { withRouter } from 'next/router'
-import _range from 'lodash.range'
-import Link from 'next/link'
-import Post from '../components/blog-index-item'
-import pagination from 'pagination'
-import blogposts from '../posts/index'
-import { siteMeta } from '../blog.config'
-import Layout from '../components/layout'
+import React from 'react';
+import { withRouter } from 'next/router';
+import _range from 'lodash.range';
+import Link from 'next/link';
+import Post from '../components/blog-index-item';
+import pagination from 'pagination';
+import blogposts from '../posts/index';
+import { siteMeta } from '../blog.config';
+import Layout from '../components/layout';
 // import '../styles/blog.css'
 
 const Blog = ({ router, page = 1 }) => {
@@ -14,26 +14,26 @@ const Blog = ({ router, page = 1 }) => {
     prelink: '/',
     current: page,
     rowsPerPage: siteMeta.postsPerPage,
-    totalResult: blogposts.length
-  })
+    totalResult: blogposts.length,
+  });
 
   const {
     previous,
     range,
     next,
     fromResult,
-    toResult
-  } = paginator.getPaginationData()
-  const results = _range(fromResult - 1, toResult, 1)
+    toResult,
+  } = paginator.getPaginationData();
+  const results = _range(fromResult - 1, toResult, 1);
 
   return (
     <Layout pageTitle='Blog | Francis Udeji'>
-      <div className='bg-gray-100 py-10 md:py-20'>
-        <div className='container'>
-          <h2 className='text-3xl text-gray-800 font-bold px-6'>
+      <div className='py-10 bg-gray-100 md:py-20'>
+        <div className='container ox-2 md:px-20'>
+          <h2 className='px-6 text-3xl font-bold text-gray-800'>
             All Blog Posts
           </h2>
-          <div className='bg-white rounded-lg pt-1 pb-10 px-6 shadow-lg md:px-10 mt-5'>
+          <div className='px-6 pt-1 pb-10 mt-5 bg-white rounded-lg shadow-lg md:px-10'>
             {blogposts
               .filter((_post, index) => results.indexOf(index) > -1)
               .map((post, index) => (
@@ -45,16 +45,18 @@ const Blog = ({ router, page = 1 }) => {
                 //   path={post.path}
                 // />
                 <div className='mt-10' key={post.title}>
-                  <h3 className='inline-block text-2xl text-gray-800 font-semibold hover:text-blue-500'>
+                  <h3 className='inline-block text-2xl font-semibold text-gray-800 hover:text-blue-500'>
                     <Link href={post.path}>
                       <a>{post.title}</a>
                     </Link>
                   </h3>
-                  <p className='text-base text-gray-800 font-normal mt-2'>
+                  <p className='mt-2 text-base font-normal text-gray-800'>
                     {post.summary}
+                  </p>
+                  <p className='mt-3 text-base font-normal text-gray-800'>
                     <Link href={post.path}>
                       <a
-                        className='text-blue-500'
+                        className='mt-3 text-blue-600'
                         aria-label={`Read ${post.title}`}
                       >
                         Read More →
@@ -98,11 +100,11 @@ const Blog = ({ router, page = 1 }) => {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 // Blog.getInitialProps = async ({ query }) => {
 //   return query ? { page: query.page } : {}
 // }
 
-export default withRouter(Blog)
+export default withRouter(Blog);
