@@ -12,6 +12,7 @@ function Contact() {
             <div className='flex flex-col sm:flex-row items-center'>
               <div className='bg-white w-full inline-block rounded-lg pt-6 pb-10 px-6 shadow-lg mt-5 sm:w-1/2 md:px-10'>
                 <form
+                  action="/contact"
                   method='POST'
                   data-netlify='true'
                   netlify-honeypot='bot-field'
